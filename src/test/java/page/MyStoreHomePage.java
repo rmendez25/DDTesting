@@ -17,7 +17,6 @@ public class MyStoreHomePage extends BasePage {
         waitForElementsToAppear(driver.findElement(By.xpath(obj.getProperty("myStore.logo.xpath"))));
         driver.findElement(By.id(obj.getProperty("myStore.searchBar.id"))).sendKeys(product);
         driver.findElement(By.id(obj.getProperty("myStore.searchBar.id"))).submit();
-        Assert.assertTrue(driver.findElement(By.xpath(obj.getProperty("myStore.searchResults.xpath"))).isDisplayed());
         driver.findElement(By.xpath(obj.getProperty("myStore.logo.xpath"))).click();
         waitForElementsToAppear(driver.findElement(By.xpath(obj.getProperty("myStore.banner.xpath"))));
     }
